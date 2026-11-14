@@ -20,5 +20,6 @@ def search_data(question_vector, source_vector_list):
             "score": score
         }
         all_data_with_score.append(data)
-    reversed_score = all_data_with_score.sort(key=lambda x: x["score"], reverse=True)
-    return reversed_score
+    all_data_with_score.sort(key=lambda x: x["score"], reverse=True)
+    top_three = all_data_with_score[:3]
+    return top_three
