@@ -6,6 +6,7 @@ def ask_llm(prompt):
         messages=[{
             "role": "user",
             "content": prompt
-        }]
+        }],
+        options={"temperature": 0.1}
     )
     return response["message"]["content"]
